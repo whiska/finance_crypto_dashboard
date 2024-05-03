@@ -62,7 +62,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("com.google.android.material:material:1.11.0")
     implementation("com.github.majorkik:SparkLineLayout:1.0.1")
-    implementation("com.github.bumptech.glide:glide:4.8.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     testImplementation("junit:junit:4.13.2")

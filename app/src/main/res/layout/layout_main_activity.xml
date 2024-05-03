@@ -4,9 +4,8 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:id="@+id/main"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,7 +15,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
@@ -34,7 +33,8 @@
                     android:ems="10"
                     android:hint="@string/search"
                     android:inputType="text"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:autofillHints=""/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="50dp"
@@ -49,7 +49,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/settings" />
+                        android:src="@drawable/settings"
+                        tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -62,26 +63,26 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginTop="16dp">
                 <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/stock_futures_lbl"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Stock Fututres"
+                    android:text="@string/stock_futures"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="16sp"/>
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/see_all_lbl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="See All"
+                    android:text="@string/see_all"
                     android:textColor="@color/purple"/>
 
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/stock_list_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"/>
@@ -91,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sectors"
+                android:text="@string/sectors"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:textStyle="bold"
@@ -102,7 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -117,23 +119,23 @@
                         android:background="@drawable/oval_bg">
 
                         <ImageView
-                            android:id="@+id/image_view_1"
+                            android:id="@+id/deposit_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
-
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/btn_1" />
+                            android:src="@drawable/btn_1"
+                            tools:ignore="ContentDescription" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/deposit_lbl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Deposite"
+                        android:text="@string/deposit"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="12sp"
@@ -153,23 +155,23 @@
                         android:background="@drawable/oval_bg">
 
                         <ImageView
-                            android:id="@+id/image_view"
+                            android:id="@+id/withdraw_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
-
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/btn_2" />
+                            android:src="@drawable/btn_2"
+                            tools:ignore="ContentDescription" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/withdraw_lbl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Withdraw"
+                        android:text="@string/withdraw"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="12sp"
@@ -189,23 +191,23 @@
                         android:background="@drawable/oval_bg">
 
                         <ImageView
-                            android:id="@+id/image_view"
+                            android:id="@+id/add_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
-
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/btn_3" />
+                            android:src="@drawable/btn_3"
+                            tools:ignore="ContentDescription" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/add_lbl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Add"
+                        android:text="@string/add"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="12sp"
@@ -225,23 +227,23 @@
                         android:background="@drawable/oval_bg">
 
                         <ImageView
-                            android:id="@+id/image_view"
+                            android:id="@+id/viewall_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
-
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/btn_4" />
+                            android:src="@drawable/btn_4"
+                            tools:ignore="ContentDescription" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/viewall_lbl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="View All"
+                        android:text="@string/view_all"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="12sp"
@@ -257,7 +259,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
-                android:text="Crypto activities"
+                android:text="@string/crypto_activities"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -265,7 +267,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/crypto_list_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp" />
@@ -273,9 +275,125 @@
 
     </ScrollView>
 
-<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp">-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            app:fabCradleVerticalOffset="6dp"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="48dp">
 
-<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/bottom_img_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bottom_btn1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/bottom_img_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bottom_btn2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/bottom_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bottom_btn1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/bottom_img_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bottom_btn3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/bottom_img_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bottom_btn4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:pointerIcon="wait"
+            android:src="@drawable/qrcode"
+            app:tint="@color/white"
+            app:backgroundTint="@color/purple"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:maxImageSize="24dp"
+            tools:ignore="ContentDescription" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
