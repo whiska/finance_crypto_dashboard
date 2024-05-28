@@ -10,4 +10,5 @@
     <color name="light_purple">#f4f6f9</color>
     <color name="semi_purple">#cfcfeb</color>
     <color name="purple">#6335e1</color>
+    <color name="spark_line_color">#fed32c</color>
 </resources>
